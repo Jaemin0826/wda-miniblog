@@ -5148,7 +5148,7 @@ border: 0.5px solid #d9d9d9;
     & > img {
         width: 180px;
     }
-`;function GB(n){const{comments:e}=n,t=e.map((r,a)=>$.jsx(HB,{comment:r},r.id));return!e||e.length===0?$.jsx(fS,{children:$.jsxs($B,{children:[" ",$.jsx("img",{src:`${base}empty.png`,alt:"댓글 없음"}),"댓글이 없습니다. 댓글을 입력해 주세요."]})}):$.jsx(fS,{children:t})}const KB=ue.div`
+`;function GB(n){const{comments:e}=n,t="/wda-miniblog/",r=e.map((a,o)=>$.jsx(HB,{comment:a},a.id));return!e||e.length===0?$.jsx(fS,{children:$.jsxs($B,{children:[" ",$.jsx("img",{src:`${t}empty.png`,alt:"댓글 없음"}),"댓글이 없습니다. 댓글을 입력해 주세요."]})}):$.jsx(fS,{children:r})}const KB=ue.div`
 display: flex;
 width: 100%;
 justify-content: space-between;
