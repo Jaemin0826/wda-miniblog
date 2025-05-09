@@ -15,6 +15,7 @@ const LeftBarBox = styled.div`
 const StyledImg = styled.img`
   transition: transform 0.1s ease;
   width: 36px;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.2);
