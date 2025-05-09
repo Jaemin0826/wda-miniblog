@@ -37,7 +37,7 @@ function CommentList(props){
     if (!comments || comments.length === 0) {
         return (
             <StyledWrapper>
-                <NoComment><img src="/empty.png"></img>댓글이 없습니다. 댓글을 입력해 주세요.</NoComment>
+                <NoComment><img src={`${import.meta.env.BASE_URL}empty.png`}></img>댓글이 없습니다. 댓글을 입력해 주세요.</NoComment>
             </StyledWrapper>
         );
     }
