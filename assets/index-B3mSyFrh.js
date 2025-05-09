@@ -136,7 +136,7 @@ Please change the parent <Route path="${K}"> to <Route path="${K==="/"?"*":`${K}
     width: 28px;
     height:28px;    
     border-radius: 24px;
-    background-image: url(${"/wda-miniblog/Icon.png"});
+    background-image: url(${"/wda-miniblogIcon.png"});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -223,7 +223,7 @@ Please change the parent <Route path="${K}"> to <Route path="${K==="/"?"*":`${K}
 `,Mk=ue.p`
     fontSize: '24px';
     color: '#888888';
-`;function Lk(n){const{posts:e,itemClicked:t}=n,r=[...e].sort((o,u)=>u.id-o.id);if(!e||e.length===0)return $.jsxs("div",{style:{width:"100%",textAlign:"center",padding:"48px 0"},children:[$.jsx("img",{src:"/wda-miniblog/empty.png",style:{width:"600px",marginBottom:"16px"}}),$.jsx(Mk,{children:"카테고리에 게시글이 없습니다."})]});const a=r.map((o,u)=>$.jsx(kk,{post:o,onClick:d=>t(o)},o.id));return $.jsx(Vk,{children:a})}const Uk=()=>{};var sI={};/**
+`;function Lk(n){const{posts:e,itemClicked:t}=n,r=[...e].sort((o,u)=>u.id-o.id);if(!e||e.length===0)return $.jsxs("div",{style:{width:"100%",textAlign:"center",padding:"48px 0"},children:[$.jsx("img",{src:"/wda-miniblogempty.png",style:{width:"600px",marginBottom:"16px"}}),$.jsx(Mk,{children:"카테고리에 게시글이 없습니다."})]});const a=r.map((o,u)=>$.jsx(kk,{post:o,onClick:d=>t(o)},o.id));return $.jsx(Vk,{children:a})}const Uk=()=>{};var sI={};/**
  * @license
  * Copyright 2017 Google LLC
  *
@@ -4843,7 +4843,7 @@ This typically indicates that your device does not have a healthy Internet conne
  */function GB(n){$B(n,(e,t)=>new sD(e,t,new FB)),n.registerVersion(UB,zB)}GB(Nu);const KB={apiKey:"AIzaSyDu7buUixDsYfky1S9MTP1ruit7IIxIrNc",authDomain:"mini-blog2025.firebaseapp.com",projectId:"mini-blog2025",storageBucket:"mini-blog2025.firebasestorage.app",messagingSenderId:"482734152598",appId:"1:482734152598:web:f31773336518f30a609bb7"},QB=Nu.initializeApp(KB),Gl=QB.firestore(),YB=ue.div`
   width: 100%;
   height: 300px;
-  background-image: ${({BannerImg:n})=>n?`url(${n})`:"url(/wda-miniblog/Banner.png)"};
+  background-image: ${({BannerImg:n})=>n?`url(${n})`:"url(/wda-miniblogBanner.png)"};
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5297,4 +5297,4 @@ cursor: pointer;
     color: #444444;
     width: 100%;
     text-align: left;
-`;function pF(){const n=xu(),e=EN().id,[t,r]=W.useState([]);W.useEffect(()=>{Gl.collection("post").get().then(_=>{let v=[];_.forEach(w=>{v.push(w.data())}),r(v)})},[]);const[a,o]=W.useState({id:0,title:"",content:"",comments:[]});W.useEffect(()=>{Gl.collection("post").doc(e).get().then(_=>{o(_.data())})},[e]);const[u,d]=W.useState(""),p=()=>{let _=new Date().getTime().toString(),w=new Date().toLocaleString("ko-KR"),S=a.comments;S.push({id:`${e}_${_}`,content:u,time:w}),Gl.collection("post").doc(e).update({comments:S}).then(()=>{alert("댓글이 등록되었습니다"),d("")})},m=()=>{window.confirm("정말로 삭제하시겠습니까?")&&Gl.collection("post").doc(e).delete().then(()=>{alert("게시글이 삭제되었습니다."),n("/")})};return $.jsxs(oF,{children:[$.jsx(lF,{children:$.jsx(zv,{})}),$.jsxs(uF,{children:[$.jsx(ST,{img:a.image}),$.jsxs(hF,{children:[$.jsx(z5,{handleDelete:m,post:a}),$.jsxs(dF,{children:[$.jsx(Q5,{currentPost:a,allPosts:t}),$.jsxs(cF,{children:[$.jsxs(fF,{children:["댓글 ",$.jsx("span",{style:{color:"#FF0051",fontWeight:"bold"},children:a.comments.length})]}),$.jsx(Sv,{placeholderSize:"16",placeholder:"댓글을 적어주세요.",height:"100",size:"16",value:u,onChange:_=>{d(_.target.value)}}),$.jsx(Bv,{title:"댓글 작성",onClick:_=>p(_.target.value)})]}),$.jsx(G5,{comments:a.comments})]}),$.jsx(aF,{posts:t,itemClicked:_=>{window.scrollTo(0,0),n(`/post/${_.id}`)}})]})]})]})}function mF(){const{pathname:n}=ya();return W.useEffect(()=>{window.scrollTo(0,0)},[n]),null}HP.createRoot(document.getElementById("root")).render($.jsxs(sO,{basename:"/wda-miniblog/",children:[$.jsx(mF,{}),$.jsxs(VN,{children:[$.jsx(ap,{index:!0,element:$.jsx(r5,{})}),$.jsx(ap,{path:"/write",element:$.jsx(R5,{})}),$.jsx(ap,{path:"/post/:id",element:$.jsx(pF,{})})]})]}));
+`;function pF(){const n=xu(),e=EN().id,[t,r]=W.useState([]);W.useEffect(()=>{Gl.collection("post").get().then(_=>{let v=[];_.forEach(w=>{v.push(w.data())}),r(v)})},[]);const[a,o]=W.useState({id:0,title:"",content:"",comments:[]});W.useEffect(()=>{Gl.collection("post").doc(e).get().then(_=>{o(_.data())})},[e]);const[u,d]=W.useState(""),p=()=>{let _=new Date().getTime().toString(),w=new Date().toLocaleString("ko-KR"),S=a.comments;S.push({id:`${e}_${_}`,content:u,time:w}),Gl.collection("post").doc(e).update({comments:S}).then(()=>{alert("댓글이 등록되었습니다"),d("")})},m=()=>{window.confirm("정말로 삭제하시겠습니까?")&&Gl.collection("post").doc(e).delete().then(()=>{alert("게시글이 삭제되었습니다."),n("/")})};return $.jsxs(oF,{children:[$.jsx(lF,{children:$.jsx(zv,{})}),$.jsxs(uF,{children:[$.jsx(ST,{img:a.image}),$.jsxs(hF,{children:[$.jsx(z5,{handleDelete:m,post:a}),$.jsxs(dF,{children:[$.jsx(Q5,{currentPost:a,allPosts:t}),$.jsxs(cF,{children:[$.jsxs(fF,{children:["댓글 ",$.jsx("span",{style:{color:"#FF0051",fontWeight:"bold"},children:a.comments.length})]}),$.jsx(Sv,{placeholderSize:"16",placeholder:"댓글을 적어주세요.",height:"100",size:"16",value:u,onChange:_=>{d(_.target.value)}}),$.jsx(Bv,{title:"댓글 작성",onClick:_=>p(_.target.value)})]}),$.jsx(G5,{comments:a.comments})]}),$.jsx(aF,{posts:t,itemClicked:_=>{window.scrollTo(0,0),n(`/post/${_.id}`)}})]})]})]})}function mF(){const{pathname:n}=ya();return W.useEffect(()=>{window.scrollTo(0,0)},[n]),null}HP.createRoot(document.getElementById("root")).render($.jsxs(sO,{basename:"/wda-miniblog",children:[$.jsx(mF,{}),$.jsxs(VN,{children:[$.jsx(ap,{index:!0,element:$.jsx(r5,{})}),$.jsx(ap,{path:"/write",element:$.jsx(R5,{})}),$.jsx(ap,{path:"/post/:id",element:$.jsx(pF,{})})]})]}));
