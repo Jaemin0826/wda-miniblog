@@ -59,13 +59,13 @@ Please change the parent <Route path="${K}"> to <Route path="${K==="/"?"*":`${K}
     background-color: #fff;
     align-items: center;
 `,c_=ue.img`
-    transition : transform 0.1s ease;
+    transition: transform 0.1s ease;
     width: 36px;
 
-    &:hover{
-    transform: scale(1.2);
+    &:hover {
+        transform: scale(1.2);
     }
-`;function zv(){const n=xu();return $.jsxs(yk,{children:[$.jsx(c_,{src:"/Logo.svg",onClick:e=>{n("/")}}),$.jsx(c_,{src:"/Home.svg",onClick:e=>{n("/")}}),$.jsx(c_,{src:"/Add.svg",onClick:e=>{n("/write")}})]})}const rR=ue.button`
+`;function zv(){const n=xu(),e="/wda-miniblog/";return $.jsxs(yk,{children:[$.jsx(c_,{src:`${e}Logo.svg`,onClick:()=>n("/")}),$.jsx(c_,{src:`${e}Home.svg`,onClick:()=>n("/")}),$.jsx(c_,{src:`${e}Add.svg`,onClick:()=>n("/write")})]})}const rR=ue.button`
     width: fit-content; 
     background-color: ${({disabled:n})=>n?"#d9d9d9":"#222222"};
     padding: 8px 16px;
@@ -5148,7 +5148,7 @@ border: 0.5px solid #d9d9d9;
     & > img {
         width: 180px;
     }
-`;function G5(n){const{comments:e}=n,t=e.map((r,a)=>$.jsx(H5,{comment:r},r.id));return!e||e.length===0?$.jsx(fS,{children:$.jsxs($5,{children:[$.jsx("img",{src:"/empty.png"}),"댓글이 없습니다. 댓글을 입력해 주세요."]})}):$.jsx(fS,{children:t})}const K5=ue.div`
+`;function G5(n){const{comments:e}=n,t=e.map((r,a)=>$.jsx(H5,{comment:r},r.id));return!e||e.length===0?$.jsx(fS,{children:$.jsxs($5,{children:[" ",$.jsx("img",{src:`${base}empty.png`,alt:"댓글 없음"}),"댓글이 없습니다. 댓글을 입력해 주세요."]})}):$.jsx(fS,{children:t})}const K5=ue.div`
 display: flex;
 width: 100%;
 justify-content: space-between;
